@@ -1,0 +1,16 @@
+<% title "Comment Subproject" %>
+
+<p>
+  <strong>Subproject:</strong>
+  <%= @comment_subproject.subproject_id %>
+</p>
+<p>
+  <strong>Comment:</strong>
+  <%= @comment_subproject.comment %>
+</p>
+
+<p>
+  <%= link_to "Edit", edit_comment_subproject_path(@comment_subproject) %> |
+  <%= link_to "Destroy", @comment_subproject, :confirm => 'Are you sure?', :method => :delete %> |
+  <%= link_to "View All", comment_subprojects_path %>
+</p>

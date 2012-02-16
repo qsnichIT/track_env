@@ -1,0 +1,120 @@
+
+.memu_show {
+    background: none repeat scroll 0 0 #F4F4EE;
+    border: 1px solid #DDDDDD;
+    border-radius: 5px 5px 5px 5px;
+    color: #AAAAAA;
+    padding: 4px;
+    float:right;
+}
+
+.memu_show a {
+    line-height: 16px;
+    position: relative;
+}
+
+
+.profile {
+    background: none repeat scroll 0 0 #FFFFFF;
+    border-bottom: 1px solid #ECECEC;
+    border-collapse: collapse;
+    line-height: 16px;
+    margin: 20px auto 10px;
+    width: 100%;
+}
+
+.profile td.field, .profile td.field-row {
+    font-weight: bold;
+    text-align: left;
+    width: 14%;
+}
+
+.profile td {
+    border-top: 1px solid #ECECEC;
+    padding: 4px;
+}
+
+#head {
+    background: url("../images/head-bg.gif") repeat-x scroll left top #2D2D2D;
+    border-bottom: 4px solid #90AF4C;
+    min-width: 860px;
+    width: 100%;
+}
+
+#head h1 {
+    color: #999999;
+    font-family: "Trebuchet MS",sans-serif;
+    padding: 24px 0 1px 20px;
+    text-shadow: 0 3px 0 #111111;
+    font-size: 22px;
+    letter-spacing: -1px;
+    line-height: 34px;
+    height: auto;
+    margin: 0 0 16px;
+}
+
+.head-comment {
+    color: #000000;
+}
+
+.work-load{
+    background-color: red;
+    color:white;
+}
+
+.work-load a{
+    color:yellow;
+}
+
+.comment {
+    background-color: #FFFFFF;
+    margin: 0 0 1px;
+    padding: 3px 3px 0;
+}
+
+.comment .counter:before {
+    content: "#";
+}
+
+.comment .counter {
+    background: none repeat scroll 0 0 #CCCCCC;
+    border: 1px solid #CCCCCC;
+    border-radius: 3px 3px 3px 3px;
+    color: #FFFFFF;
+    font-size: 13px;
+    padding: 3px 2px;
+}
+
+#status_user {
+    -moz-border-bottom-colors: none;
+    -moz-border-image: none;
+    -moz-border-left-colors: none;
+    -moz-border-right-colors: none;
+    -moz-border-top-colors: none;
+    background: none repeat scroll 0 0 #2D2D2D;
+    border-bottom-left-radius: 6px;
+    border-bottom-right-radius: 6px;
+    border-color: #707070;
+    border-style: solid;
+    border-width: 0 1px 1px;
+    color: #BBBBBB;
+    font-size: 12px;
+    padding: 2px 7px 4px;
+    position: absolute;
+    right: 5px;
+    top: -6px;
+}
+
+#status_user a:link, #status_user a:visited {
+    color: #BBBBBB;
+    font-size: 12px;
+}
+
+.link-manage-user{
+    float:right;
+    margin:0 20px 5px 0;
+}
+
+.link-manage-user a{
+    color:#BBBBBB;
+}

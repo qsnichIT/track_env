@@ -1,0 +1,19 @@
+<% title "Comment Subprojects" %>
+
+<table>
+  <tr>
+    <th>Subproject</th>
+    <th>Comment</th>
+  </tr>
+  <% for comment_subproject in @comment_subprojects %>
+    <tr>
+      <td><%= comment_subproject.subproject_id %></td>
+      <td><%= comment_subproject.comment %></td>
+      <td><%= link_to "Show", comment_subproject %></td>
+      <td><%= link_to "Edit", edit_comment_subproject_path(comment_subproject) %></td>
+      <td><%= link_to "Destroy", comment_subproject, :confirm => 'Are you sure?', :method => :delete %></td>
+    </tr>
+  <% end %>
+</table>
+
+<p><%= link_to "New Comment Subproject", new_comment_subproject_path %></p>

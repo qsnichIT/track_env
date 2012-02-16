@@ -1,0 +1,23 @@
+<% title "Subprojects" %>
+
+<table>
+  <tr>
+    <th>Project</th>
+    <th>Subname</th>
+    <th>Start Date</th>
+    <th>End Date</th>
+  </tr>
+  <% for subproject in @subprojects %>
+    <tr>
+      <td><%= subproject.project_id %></td>
+      <td><%= subproject.subname %></td>
+      <td><%= subproject.start_date %></td>
+      <td><%= subproject.end_date %></td>
+      <td><%= link_to "Show", subproject %></td>
+      <td><%= link_to "Edit", edit_subproject_path(subproject) %></td>
+      <td><%= link_to "Destroy", subproject, :confirm => 'Are you sure?', :method => :delete %></td>
+    </tr>
+  <% end %>
+</table>
+
+

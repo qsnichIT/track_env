@@ -1,0 +1,65 @@
+<% title "มาตรฐาน" %>
+<div class="memu_show">
+  <%= link_to "แก้ไข", edit_project_subproject_path(Project.find(params[:project_id]),@subproject) %> |
+  <%= link_to "ลบ", @subproject, :confirm => 'Are you sure?', :method => :delete %> |
+  <%= link_to "ย้อนกลับ", @subproject.project %>
+</div>
+
+
+
+<div style="clear:both"></div>
+
+<table class="profile" >
+  <tr>
+    <td class="field">ชื่อโครงการ:</td>
+    <td><%= @subproject.project.project_name %></td>
+  </tr>
+  <tr>
+    <td class="field">มาตนฐาน:</td>
+    <td> <%= @subproject.subname %></td>
+  </tr>
+  
+  <tr>
+    <td class="field">เริ่มเมื่อ:</td>
+    <td> <%=  to_date_th @subproject.start_date %></td>
+  </tr>
+  <tr>
+    <td class="field">สิ้นสุดเมื่อ:</td>
+    <td><%= to_date_th @subproject.end_date %></td>
+  </tr>
+  <tr>
+    <td class="field">สถานะ:</td>
+    <td><%= status @subproject.status %></td>
+  </tr>
+  <tr>
+    <td class="field" style="vertical-align:top;">รายละเอียด:</td>
+    <td><%=  simple_format(@subproject.detail) %></td>
+  </tr> 
+</table>
+
+
+<h3 class="head-comment">Comment</h3>
+<div>
+  <% i = 0 %>
+<% @comment_subprojects.each do |c| %>
+<% i += 1 %>
+<div class="comment">
+  <h4>
+    <span class="counter"><%= i %></span><span style="padding:0 6px"><%= c.user.full_name %> at <%= to_datetime_th c.created_at %></span>
+  </h4>
+  <p><%= simple_format(c.comment) %></p>
+</div>
+
+<% end %>
+</div>
+
+
+
+<%= form_for [@subproject, CommentSubproject.new] do |f| %>
+  <p>
+    <%= f.text_area :comment, :size => "70x6" %>
+  </p>
+  <p><%= f.submit "Add Comment" %>
+<% end %>
+
+

@@ -1,0 +1,18 @@
+<% title "อาคาร" %>
+<div class="memu_show">
+  <%= link_to "เพิ่มอาคาร", new_building_path %> |
+  <%= link_to "ย้อนกลับ", projects_path %>  
+</div><div style="clear:both"></div>
+
+<table class="profile">
+  <tr>
+    <th>ชื่ออาคาร</th>
+  </tr>
+  <% for building in @buildings %>
+    <tr>
+      <td><%= link_to building.name,edit_building_path(building) %></td>
+    </tr>
+  <% end %>
+</table>
+
+

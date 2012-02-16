@@ -1,0 +1,28 @@
+<%= form_for @project do |f| %>
+  <%= f.error_messages %>
+  <p>
+    <%= f.label :project_name,"โครงการ" %><br />
+    <%= f.text_field :project_name %>
+  </p>
+  <p>
+    <%= f.label :start_date,"เริ่มเมื่อ" %><br />
+    <%= f.date_select :start_date, {:order => [:day, :month, :year],:use_month_names => ['มกราคม','กุมภาพันธ์','มีนาคม','เมษายน','พฤษภาคม','มิถุนายน','กรกฎาคม','สิงหาคม','กันยายน ','ตุลาคม','พฤศจิกายน','ธันวาคม']} %>
+  </p>
+  <p>
+    <%= f.label :end_date,"สิ้นสุดเมื่อ" %><br />
+    <%= f.date_select :end_date, {:order => [:day, :month, :year],:use_month_names => ['มกราคม','กุมภาพันธ์','มีนาคม','เมษายน','พฤษภาคม','มิถุนายน','กรกฎาคม','สิงหาคม','กันยายน ','ตุลาคม','พฤศจิกายน','ธันวาคม']} %>
+  </p>
+  <p>
+    <%= f.label :secret,"สาธารณะ" %><br />
+    <%= f.check_box(:secret,{},"1","0") %>
+  </p>
+    <p>
+    <%= f.label :detail,"รายละเอียด" %><br />
+    <%= f.text_area :detail , :size => "70x6" %>
+  </p>
+  
+
+  
+  
+  <p><%= f.submit "บันทึก" %></p>
+<% end %>

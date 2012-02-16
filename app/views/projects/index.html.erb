@@ -1,0 +1,24 @@
+<% title "หน่วยงาน สิ่งแวดล้อม" %>
+<div class="memu_show"><%= link_to "เพิ่มโครงการ", new_project_path %></div><div style="clear:both"></div>
+
+<table class="profile">
+  <tr>
+    <th>โครงการ</th>
+    <th>เริ่มเมื่อ</th>
+    <th>สิ้นสุดเมื่อ</th>
+    <th>สาธารณะ</th>
+    <th>สถานะ</th>
+  </tr>
+  <% for project in @projects %>
+    <tr class="<%= project.class_name  %>">
+      <td><%= project.project_name %></td>
+      <td><%= project.start_date %></td>
+      <td><%= project.end_date %></td>
+      <td><%= secret project.secret %></td>
+      <td><%= project.status %></td>
+      <td><%= link_to "ดูรายละเอียด", project %></td>
+      <td><%= link_to "แก้ไข", edit_project_path(project) %></td>
+      <td><%= link_to "ลบ", project, :confirm => 'Are you sure?', :method => :delete %></td>
+    </tr>
+  <% end %>
+</table>

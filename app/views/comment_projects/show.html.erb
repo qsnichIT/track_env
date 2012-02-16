@@ -1,0 +1,16 @@
+<% title "Comment Project" %>
+
+<p>
+  <strong>Project:</strong>
+  <%= @comment_project.project_id %>
+</p>
+<p>
+  <strong>Comment:</strong>
+  <%= @comment_project.comment %>
+</p>
+
+<p>
+  <%= link_to "Edit", edit_comment_project_path(@comment_project) %> |
+  <%= link_to "Destroy", @comment_project, :confirm => 'Are you sure?', :method => :delete %> |
+  <%= link_to "View All", comment_projects_path %>
+</p>

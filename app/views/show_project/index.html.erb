@@ -1,0 +1,20 @@
+<% title "หน่วยงาน สิ่งแวดล้อม" %>
+<div class="memu_show"><%= link_to "ย้อนกลับ", root_path %></div><div style="clear:both"></div>
+
+<table class="profile">
+  <tr>
+    <th>โครงการ</th>
+    <th>เริ่มเมื่อ</th>
+    <th>สิ้นสุดเมื่อ</th>
+    <th>สถานะ</th>
+  </tr>
+  <% for project in @projects %>
+    <tr class="<%= project.class_name  %>">
+      <td><%= project.project_name %></td>
+      <td><%= project.start_date %></td>
+      <td><%= project.end_date %></td>
+      <td><%= project.status %></td>
+      <td><%= link_to "ดูรายละเอียด", show_project_path(project) %></td>
+    </tr>
+  <% end %>
+</table>

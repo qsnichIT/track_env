@@ -1,0 +1,12 @@
+<%= form_for @comment_subproject do |f| %>
+  <%= f.error_messages %>
+  <p>
+    <%= f.label :subproject_id %><br />
+    <%= f.text_field :subproject_id %>
+  </p>
+  <p>
+    <%= f.label :comment %><br />
+    <%= f.text_area :comment %>
+  </p>
+  <p><%= f.submit %></p>
+<% end %>

@@ -1,0 +1,26 @@
+<% title "Manage User" %>
+<div class="memu_show">
+  <%= link_to "เพิ่มผู้ใช้งาน", signup_path %> |
+  <%= link_to "ย้อนกลับ", projects_path %>  
+</div><div style="clear:both"></div>
+<table class="profile">
+  <tr>
+    <th>Username</th>
+    <th>ชื่อ</th>
+    <th>นามสกุล</th>
+    <th>Admin</th>
+  </tr>
+
+<% @users.each do |u| %>
+  <tr>
+    <td><%= u.username %></td>
+    <td><%= u.fname %></td>
+    <td><%= u.lname %></td>
+    <td><%= status_admin u.admin %></td>
+    <td><%= link_to "แก้ไข", edit_current_user_path(u)%></td>
+    <!--<td><%= link_to "ลบ", u, :confirm => 'Are you sure?', :method => :delete %></td>-->
+  </tr>
+<% end %>
+
+
+</table>
